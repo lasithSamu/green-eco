@@ -1,0 +1,225 @@
+@use "../../../styles/variables.scss" as *;
+@use "sass:map";
+
+.keepUpSection {
+    background-color: map.get($colors, light-gray);
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+
+    .keepUpWrap {
+        padding: 40px 20px;
+
+        .keepUpLeftWrap {
+            margin-bottom: 40px;
+
+            .keepUpTitle {
+                text-align: center;
+                font-size: 30px;
+                font-weight: 400;
+                margin-bottom: 30px;
+            }
+
+            .keepUpleftImg {
+                margin-bottom: 20px;
+
+                img {
+                    width: 100%;
+                    height: 300px;
+                }
+            }
+        }
+
+        .keepUpRightWrap {
+            .keepUpRightItem {
+                margin-bottom: 40px;
+                text-align: center;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .kRImg {
+                    margin-bottom: 20px;
+
+                    img {
+                        height: 220px;
+                        width: 100%;
+                        border-radius: 120px;
+                        object-fit: cover;
+                    }
+                }
+
+                .kRTitle {
+                    font-weight: 400;
+                    font-size: 25px;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+
+                .kRDec {
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .keepUpSection {
+
+        .keepUpWrap {
+            padding: 50px 40px;
+
+            .keepUpLeftWrap {
+                margin-bottom: 50px;
+
+                .keepUpTitle {
+                    text-align: center;
+                    font-size: 45px;
+                    font-weight: 400;
+                    margin-bottom: 30px;
+                }
+
+                .keepUpleftImg {
+                    margin-bottom: 20px;
+
+                    img {
+                        width: 100%;
+                        height: 480px;
+                    }
+                }
+            }
+
+            .keepUpRightWrap {
+                .keepUpRightItem {
+                    margin-bottom: 60px;
+                    text-align: center;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .kRImg {
+                        margin-bottom: 30px;
+
+                        img {
+                            height: 300px;
+                            width: 100%;
+                            border-radius: 200px;
+                        }
+                    }
+
+                    .kRTitle {
+                        font-weight: 400;
+                        font-size: 25px;
+                        text-align: center;
+                        margin-bottom: 10px;
+                    }
+
+                    .kRDec {
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width:1200px) {
+    .keepUpSection {
+
+        .keepUpWrap {
+            padding: 0 70px;
+            display: flex;
+
+            .keepUpLeftWrap {
+                margin-bottom: 0;
+                width: 33%;
+                border-right: 1px solid rgba(0, 0, 0, 0.4);
+                padding-top: 70px;
+                padding-right: 20px;
+
+                .keepUpTitle {
+                    text-align: center;
+                    font-size: 55px;
+                    font-weight: 400;
+                    margin-bottom: 30px;
+                }
+
+                .keepUpleftImg {
+                    margin-bottom: 0;
+                    height: 480px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .keepUpRightWrap {
+                flex: 1;
+                padding-top: 70px;
+                padding-left: 30px;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    left: 30px;
+                    bottom: 40px;
+                    width: 50%;
+                    background-color: rgb(69 160 95);
+                    height: 4px;
+                    position: absolute;
+                }
+
+                &:before {
+                    content: "";
+                    right: 0;
+                    bottom: 40px;
+                    width: 50%;
+                    background-color: #cdcbca;
+                    height: 4px;
+                    position: absolute;
+                }
+
+                .keepUpRightItem {
+                    margin-bottom: 0;
+                    text-align: center;
+                    width: 48%;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .kRImg {
+                        margin-bottom: 20px;
+
+                        img {
+                            height: 300px;
+                            width: 100%;
+                            border-radius: 200px;
+                        }
+                    }
+
+                    .kRTitle {
+                        font-weight: 400;
+                        font-size: 25px;
+                        text-align: center;
+                        margin-bottom: 10px;
+                    }
+
+                    .kRDec {
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

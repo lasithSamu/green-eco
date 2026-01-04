@@ -1,0 +1,298 @@
+@use "../../../styles/variables.scss" as *;
+@use "sass:map";
+
+.aboutUsSection {
+    .aboutUsWrap {
+        background-color: map.get($colors, light-gray);
+        padding: 40px 20px;
+
+        .aboutUsTitlesWrap {
+            margin-bottom: 30px;
+
+            .abTopTitle {
+                font-family: $primary-font;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+
+        .aboutUsContentWrap {
+            .aboutUsItemWrap {
+                text-align: center;
+                font-weight: 400;
+                margin-bottom: 35px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    bottom: -16px;
+                    width: 100%;
+                    height: 0.5px;
+                    background-color: rgba(0, 0, 0, 0.162);
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                .abItemText {
+                    font-weight: 400;
+                    font-size: 26px;
+                    line-height: 35px;
+                    margin-bottom: 10px;
+                }
+
+                .abouArrowImgWrap {
+                    background-color: rgb(200, 200, 200);
+                    border-radius: 50%;
+                    padding: 5px;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+
+
+                    }
+                }
+
+
+                .abouTabImgWrap {
+                    img {
+                        width: 250px;
+                        height: 50px;
+                        border-radius: 50px;
+                        object-fit: cover;
+                    }
+                }
+
+                button {
+                    font-size: 20px;
+                    font-weight: 500;
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        margin-left: 5px;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .aboutUsSection {
+        .aboutUsWrap {
+            background-color: map.get($colors, light-gray);
+            padding: 40px 20px;
+
+            .aboutUsTitlesWrap {
+                margin-bottom: 30px;
+
+                .abTopTitle {
+                    font-family: $primary-font;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+
+            .aboutUsContentWrap {
+                .aboutUsItemWrap {
+                    text-align: center;
+                    font-weight: 400;
+                    margin-bottom: 35px;
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        bottom: -16px;
+                        width: 100%;
+                        height: 0.5px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+
+                        &:after {
+                            display: none;
+                        }
+                    }
+
+                    .abItemText {
+                        font-weight: 400;
+                        font-size: 26px;
+                        line-height: 35px;
+                        margin-bottom: 10px;
+                    }
+
+                    .abouArrowImgWrap {
+                        background-color: rgb(200, 200, 200);
+                        border-radius: 50%;
+                        padding: 5px;
+                        width: 30px;
+                        height: 30px;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 20px;
+
+                        img {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+
+                    .abouTabImgWrap {
+                        margin: 0 20px;
+
+                        img {
+                            width: 250px;
+                            height: 50px;
+                            border-radius: 50px;
+                            object-fit: cover;
+                        }
+                    }
+
+                    button {
+                        font-size: 20px;
+                        font-weight: 500;
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            margin-left: 5px;
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .aboutUsSection {
+        .aboutUsWrap {
+            background-color: map.get($colors, light-gray);
+            padding: 80px 80px;
+
+            .aboutUsTitlesWrap {
+                margin-bottom: 40px;
+
+                .abTopTitle {
+                    font-size: 20px;
+                    line-height: 26px;
+                }
+            }
+
+            .aboutUsContentWrap {
+                .aboutUsItemWrap {
+                    text-align: center;
+                    font-weight: 400;
+                    margin-bottom: 70px;
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        bottom: -30px;
+                        width: 100%;
+                        height: 0.5px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+
+                        &:after {
+                            display: none;
+                        }
+                    }
+
+                    .abItemText {
+                        font-weight: 400;
+                        font-size: 55px;
+                        line-height: 60px;
+                        margin-bottom: 10px;
+                    }
+
+                    .abouArrowImgWrap {
+                        background-color: rgb(200, 200, 200);
+                        border-radius: 50%;
+                        padding: 5px;
+                        width: 30px;
+                        height: 30px;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 30px;
+
+                        img {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+
+                    .abouTabImgWrap {
+                        margin: 0 30px;
+
+                        img {
+                            width: 300px;
+                            height: 75px;
+                            border-radius: 50px;
+                            object-fit: cover;
+                        }
+                    }
+
+                    button {
+                        font-size: 30px;
+                        font-weight: 500;
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            margin-left: 5px;
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+@use "../../../styles/variables.scss" as *;
+
+
+.primaryBtn {
+  background-color: map-get($colors, primary);
+  color: map-get($colors, white);
+
+  font-family: $primary-font;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: map-get($colors, primary);
+
+  }
+}
+
+.secondaryBtn {
+  background-color: transparent;
+  color: map-get($colors, black);
+
+  font-family: $primary-font;
+  font-weight: 700;
+  font-size: 14px;
+  // padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: underline;
+  text-decoration-thickness: 2px; // underline width
+  text-underline-offset: 4px;
+
+  &:hover {
+    background-color: map-get($colors, primary);
+
+  }
+}
+
+.tertiaryBtn {
+  background-color: transparent;
+  color: map-get($colors, black);
+
+  font-family: $primary-font;
+  font-weight: 700;
+  font-size: 14px;
+  // padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: underline;
+  text-decoration-thickness: 2px; // underline width
+  text-underline-offset: 4px;
+  text-decoration-color: map-get($colors, primary);
+
+  &:hover {
+    a {}
+
+    color: map-get($colors, primary);
+  }
+}
+
+.quaternaryBtn {
+  background-color: transparent;
+  color: map-get($colors, primary);
+  font-family: $primary-font;
+  font-weight: 700;
+  font-size: 14px;
+  // padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: underline;
+  text-decoration-thickness: 2px; // underline width
+  text-underline-offset: 4px;
+  // text-decoration-color: map-get($colors, primary);
+
+  &:hover {
+    a {}
+
+    color: map-get($colors, black);
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .primaryBtn {
+    background-color: map-get($colors, primary);
+    color: #fff;
+    font-family: $primary-font;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: map-get($colors, primary);
+    }
+  }
+
+  .secondaryBtn {
+    background-color: transparent;
+    color: #000000;
+    font-family: $primary-font;
+    font-weight: 700;
+    font-size: 14px;
+    // padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: underline;
+    text-decoration-thickness: 2px; // underline width
+    text-underline-offset: 4px;
+
+    &:hover {
+      color: map-get($colors, primary);
+    }
+  }
+
+  .quaternaryBtn {
+    font-weight: 700;
+    font-size: 17px;
+    // padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: underline;
+    text-decoration-thickness: 2px; // underline width
+    text-underline-offset: 8px;
+    // text-decoration-color: map-get($colors, primary);
+
+    &:hover {
+      a {}
+
+      color: map-get($colors, black);
+    }
+  }
+}

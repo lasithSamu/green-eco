@@ -1,0 +1,214 @@
+@use "../../../styles/variables.scss" as *;
+@use "sass:map";
+
+.countDownSection {
+    .countDownWrap {
+        position: relative;
+
+        .countDownBgWrap {
+            img {
+                width: 100%;
+                height: 380px;
+                object-fit: cover;
+            }
+        }
+
+        .countDownContentWrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            .cDownWrap {
+                padding: 50px 20px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .countDownItemWrap {
+                    color: map.get($colors, white);
+                    margin-bottom: 30px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .cDTitle {
+                        font-size: 30px;
+                        font-weight: 300;
+                        margin-bottom: 10px;
+                    }
+
+                    .cDText {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .countDownSection {
+        .countDownWrap {
+            position: relative;
+
+            .countDownBgWrap {
+                img {
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+            }
+
+            .countDownContentWrap {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+
+                .cDownWrap {
+                    padding: 50px 50px;
+                    text-align: center;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+
+                    .countDownItemWrap {
+                        color: map.get($colors, white);
+                        margin-bottom: 50px;
+                        width: 50%;
+                        position: relative;
+
+                        &:last-child {
+                            &::after {
+                                display: none;
+                            }
+                        }
+
+                        &:nth-child(2n) {
+                            &::after {
+                                display: none;
+                            }
+                        }
+
+                        &::after {
+                            content: "";
+                            right: -20px;
+                            height: 100%;
+                            top: 0;
+                            width: 1px;
+                            background-color: rgba(255, 255, 255, 0.758);
+                            position: absolute;
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        .cDTitle {
+                            font-size: 30px;
+                            font-weight: 300;
+                            margin-bottom: 10px;
+                        }
+
+                        .cDText {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1200px) {
+
+    .countDownSection {
+        .countDownWrap {
+            position: relative;
+
+            .countDownBgWrap {
+                img {
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+            }
+
+            .countDownContentWrap {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+
+                .cDownWrap {
+                    padding: 100px 50px;
+                    text-align: center;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+
+                    .countDownItemWrap {
+                        color: map.get($colors, white);
+                        margin-bottom: 0;
+                        width: 33%;
+                        position: relative;
+
+                        &:last-child {
+                            &::after {
+                                display: none;
+                            }
+                        }
+
+                        &:nth-child(2n) {
+                            &::after {
+                                content: "";
+                                right: -20px;
+                                height: 100%;
+                                top: 0;
+                                width: 1px;
+                                background-color: rgba(255, 255, 255, 0.758);
+                                position: absolute;
+                                display: block;
+                            }
+                        }
+
+                        &::after {
+                            content: "";
+                            right: -20px;
+                            height: 100%;
+                            top: 0;
+                            width: 1px;
+                            background-color: rgba(255, 255, 255, 0.758);
+                            position: absolute;
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        .cDTitle {
+                            font-size: 40px;
+                            font-weight: 300;
+                            margin-bottom: 12px;
+                        }
+
+                        .cDText {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

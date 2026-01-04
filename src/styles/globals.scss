@@ -1,0 +1,35 @@
+@use "./variables" as *;
+
+@function color($key) {
+  @return map-get($colors, $key);
+}
+
+body {
+  font-family: $primary-font, sans-serif;
+    // color: $text-color;
+    // background-color: $white;
+  margin: 0;
+  border: none;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $secondary-font, serif;
+  margin: 0;
+}
+p{
+    margin: 0;
+}
+ul,ol{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: rgb(42, 42, 42);
+}
