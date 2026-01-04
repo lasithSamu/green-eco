@@ -26,7 +26,7 @@ export default function OurApp() {
 const { width } = useWindowSize();
   if (!width) return null; 
 
-    const slidesToShow = width < 768 ? 4 : 8;
+    const slidesToShow = width < 768 ? 3 : 8;
 
   const settings = {
     loop: true,

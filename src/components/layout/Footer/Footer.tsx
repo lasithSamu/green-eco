@@ -59,7 +59,7 @@ export default function Footer() {
               <nav className={styles.footerNavBar}>
                 <ul>
                   <li>
-                    <Button href="#home" variant="tertiary">
+                    <Button href="/" variant="tertiary">
                       Home
                     </Button>
                   </li>
@@ -69,7 +69,7 @@ export default function Footer() {
                     </Button>
                   </li>
                   <li>
-                    <Button href="#features" variant="tertiary">
+                    <Button href="#join" variant="tertiary">
                       Features
                     </Button>
                   </li>
