@@ -1,17 +1,16 @@
-# GreenEco – Landing Page Frontend (TypeScript Next.js)
+# GreenEco – Landing Page Frontend ( Next.js)
 
 ## Design Reference
-The UI/UX of this project is based on the following design inspiration:
+The UI/UX of this project is based on the following design:
 
 - https://dribbble.com/shots/22889194-GreenEco-Landing-Page
 
-The design was used only as a visual reference. All layout structure, styling, and code were implemented independently using TypeScript.
+The design was used only as a visual reference. All layout structure, styling, and code were implemented independently using Next.js.
 
 ---
 
 ## Tech Stack
 - Next.js (latest stable version)
-- React (with TypeScript)
 - TypeScript
 - SCSS (SASS)
 - CSS Modules
@@ -34,7 +33,6 @@ The design was used only as a visual reference. All layout structure, styling, a
 - Optimized images for better performance
 - Clean, modular SCSS structure for maintainability
 - Improved accessibility with readable contrast and scalable text
-- Type safety with TypeScript for better code quality
 
 ---
 
@@ -60,3 +58,4 @@ Check if Node.js and npm are installed:
 ```bash
 node -v
 npm -v
+
