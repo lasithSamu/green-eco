@@ -1,6 +1,9 @@
-import Button from "../../ui/Button/Button";
+"use client";
+
 import styles from "./CountDown.module.scss";
 import Image from "next/image";
+import FadeUp from "../../animations/FadeUp"; 
+
 
 export default function CountDown() {
   return (
@@ -15,22 +18,25 @@ export default function CountDown() {
             priority
           />
         </div>
+
         <div className={styles.countDownContentWrap}>
           <div className={styles.cDownWrap}>
-            <div className={styles.countDownItemWrap}>
+            <FadeUp className={styles.countDownItemWrap}>
               <h3 className={styles.cDTitle}>997 million+</h3>
               <p className={styles.cDText}>
                 Trees Produced, planted, and protected
               </p>
-            </div>
-            <div className={styles.countDownItemWrap}>
+            </FadeUp>
+
+            <FadeUp className={styles.countDownItemWrap}>
               <h3 className={styles.cDTitle}>280</h3>
               <p className={styles.cDText}>Project Sites in 10 countries</p>
-            </div>
-            <div className={styles.countDownItemWrap}>
+            </FadeUp>
+
+            <FadeUp className={styles.countDownItemWrap}>
               <h3 className={styles.cDTitle}>14,800+</h3>
               <p className={styles.cDText}>Project Active</p>
-            </div>
+            </FadeUp>
           </div>
         </div>
       </div>

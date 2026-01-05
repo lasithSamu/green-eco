@@ -1,53 +1,62 @@
 import Button from "../../ui/Button/Button";
 import styles from "./AboutUs.module.scss";
 import Image from "next/image";
+import FadeUp from "../../animations/FadeUp"; 
+
 
 export default function AboutUs() {
   return (
     <section className={styles.aboutUsSection} id="about">
       <div className={styles.aboutUsWrap}>
         <div className={styles.aboutUsTitlesWrap}>
-          <h3 className={styles.abTopTitle}>What do we do</h3>
-          <h3 className={styles.abTopTitle}>
-            Learn about our story and mission
-          </h3>
+          <FadeUp>
+            <h3 className={styles.abTopTitle}>What do we do</h3>
+          </FadeUp>
+          <FadeUp>
+            <h3 className={styles.abTopTitle}>
+              Learn about our story and mission
+            </h3>
+          </FadeUp>
         </div>
+
         <div className={styles.aboutUsContentWrap}>
-          <div className={styles.aboutUsItemWrap}>
-            <h2 className={styles.abItemText}>We are Growing a </h2>
+          <FadeUp className={styles.aboutUsItemWrap}>
+            <h2 className={styles.abItemText}>We are Growing a</h2>
             <div className={styles.abouTabImgWrap}>
               <Image
                 src="/images/tubeimage1.png"
-                alt="tress"
+                alt="trees"
                 width={120}
                 height={120}
                 priority
               />
             </div>
+            <h2 className={styles.abItemText}>Greener Future</h2>
+          </FadeUp>
 
-            <h2 className={styles.abItemText}>Greener Future </h2>
-          </div>
-          <div className={styles.aboutUsItemWrap}>
+          <FadeUp className={styles.aboutUsItemWrap}>
             <h2 className={styles.abItemText}>
               Our Mission to Plant Trees and Reduce
             </h2>
-          </div>
-          <div className={styles.aboutUsItemWrap}>
+          </FadeUp>
+
+          <FadeUp className={styles.aboutUsItemWrap}>
             <div className={styles.abouArrowImgWrap}>
               <Image
                 src="/images/twoarrows.png"
-                alt="twoarrows"
+                alt="two arrows"
                 width={120}
                 height={120}
                 priority
               />
             </div>
 
-            <h2 className={styles.abItemText}>Carbon Footprint </h2>
+            <h2 className={styles.abItemText}>Carbon Footprint</h2>
+
             <div className={styles.abouTabImgWrap}>
               <Image
                 src="/images/tubeimage2.png"
-                alt="tress"
+                alt="trees"
                 width={120}
                 height={120}
                 priority
@@ -64,7 +73,7 @@ export default function AboutUs() {
                 priority
               />
             </Button>
-          </div>
+          </FadeUp>
         </div>
       </div>
     </section>

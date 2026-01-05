@@ -1,6 +1,7 @@
 import Button from "../../ui/Button/Button";
 import styles from "./JoinUs.module.scss";
 import Image from "next/image";
+import FadeUp from "../../animations/FadeUp";
 
 const joinUsItems = [
   {
@@ -24,7 +25,7 @@ const joinUsItems = [
     description:
       "Take action to lower your carbon emissions and support initiatives that fight climate change effectively.",
   },
-   {
+  {
     id: 4,
     image: "/images/j4.jpg",
     title: "Clean Our Oceans",
@@ -48,15 +49,22 @@ export default function JoinUs() {
         </div>
 
         <div className={styles.joinUsTitlesWrap}>
-          <h3 className={styles.joinTopTitleOne}>Join the Green Revolution</h3>
-          <h3 className={styles.joinTopTitleTwo}>
-            Choose Your Path to making a difference Today!
-          </h3>
+          <FadeUp>
+            <h3 className={styles.joinTopTitleOne}>
+              Join the Green Revolution
+            </h3>
+          </FadeUp>
+          <FadeUp>
+            <h3 className={styles.joinTopTitleTwo}>
+              Choose Your Path to making a difference Today!
+            </h3>
+          </FadeUp>
         </div>
         <div className={styles.joinUsContentWrap}>
           {joinUsItems.map((item) => (
             <div key={item.id} className={styles.joinUsItemWrap}>
-              <div className={styles.joinItemImgWrap}>
+              <FadeUp>
+                 <div className={styles.joinItemImgWrap}>
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -65,14 +73,25 @@ export default function JoinUs() {
                   priority
                 />
               </div>
+              </FadeUp>
+             
+              <FadeUp>
+                <h2 className={styles.joinItemitle}>{item.title}</h2>
+              </FadeUp>
 
-              <h2 className={styles.joinItemitle}>{item.title}</h2>
+              
+              <FadeUp>
+                 <p className={styles.joinItemDescription}>{item.description}</p>
+              </FadeUp>
 
-              <p className={styles.joinItemDescription}>{item.description}</p>
-
-              <Button variant="primary" href="#">
+             
+              <FadeUp>
+                    <Button variant="primary" href="#">
                 Contribute Now
               </Button>
+              </FadeUp>
+
+          
             </div>
           ))}
         </div>

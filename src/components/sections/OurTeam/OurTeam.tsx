@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useWindowSize } from "../../../hooks/useWindowSize";
+import FadeUp from "../../animations/FadeUp";
 
 export default function OurTeam() {
   const ourTeam = [
@@ -24,9 +25,8 @@ export default function OurTeam() {
     "m8.png",
   ];
   const { width } = useWindowSize();
-  if (!width) return null; 
-const slidesToShow =
-  width < 768 ? 2 : width < 1024 ? 4 : 6;
+  if (!width) return null;
+  const slidesToShow = width < 768 ? 2 : width < 1024 ? 4 : 6;
 
   const settingsLTR = {
     loop: true,
@@ -40,7 +40,7 @@ const slidesToShow =
     draggable: false,
     cssEase: "linear",
   };
-   const settingsRTL = {
+  const settingsRTL = {
     ...settingsLTR,
     rtl: true, // makes slider go right-to-left
   };
@@ -48,42 +48,48 @@ const slidesToShow =
     <section className={styles.ourTeamSection}>
       <div className={styles.ourTeamWrap}>
         <div className={styles.ourTeamTitleWrap}>
-          <h3 className={styles.ourTeamTitle}>
-            Meet Our Trusted Team of <br /> Supervisory Authorities
-          </h3>
+          <FadeUp>
+            <h3 className={styles.ourTeamTitle}>
+              Meet Our Trusted Team of <br /> Supervisory Authorities
+            </h3>
+          </FadeUp>
         </div>
       </div>
-
-      <div className={styles.ourTeamSliderWrap}>
-        <Slider {...settingsLTR} className={styles.ourTeamSlider}>
-          {ourTeam.map((tag, index) => (
-            <div key={index} className={styles.ourTeamItem}>
-              <Image
-                src={`/images/${tag}`}
-                alt="Team Member"
-                width={100}
-                height={100}
-                priority
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
-         <div className={styles.ourTeamSliderWrap}>
-        <Slider {...settingsRTL} className={styles.ourTeamSlider}>
-          {ourTeam.map((tag, index) => (
-            <div key={index} className={styles.ourTeamItem}>
-              <Image
-                src={`/images/${tag}`}
-                alt="Team Member"
-                width={100}
-                height={100}
-                priority
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
+      <FadeUp>
+        {" "}
+        <div className={styles.ourTeamSliderWrap}>
+          <Slider {...settingsLTR} className={styles.ourTeamSlider}>
+            {ourTeam.map((tag, index) => (
+              <div key={index} className={styles.ourTeamItem}>
+                <Image
+                  src={`/images/${tag}`}
+                  alt="Team Member"
+                  width={100}
+                  height={100}
+                  priority
+                />
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </FadeUp>
+      <FadeUp>
+        <div className={styles.ourTeamSliderWrap}>
+          <Slider {...settingsRTL} className={styles.ourTeamSlider}>
+            {ourTeam.map((tag, index) => (
+              <div key={index} className={styles.ourTeamItem}>
+                <Image
+                  src={`/images/${tag}`}
+                  alt="Team Member"
+                  width={100}
+                  height={100}
+                  priority
+                />
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </FadeUp>
     </section>
   );
 }

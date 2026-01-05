@@ -19,7 +19,6 @@ export default function Button({
     secondary: styles.secondaryBtn,
     tertiary: styles.tertiaryBtn,
     quaternary: styles.quaternaryBtn,
-
   }[variant];
 
   if (href) {

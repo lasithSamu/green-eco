@@ -7,7 +7,6 @@ export default function HomeBanner() {
     <section className={styles.homeBannerSection} id="home">
       <div className={styles.homeBannerWrap}>
         <div className={styles.homeBannerContent}>
-          {/* Banner Image */}
           <div className={styles.homeBannerImgWrap}>
             <picture>
               <source
@@ -28,14 +27,12 @@ export default function HomeBanner() {
           <h1 className={styles.hmMainTitle}>
             Planting Trees for a Better Future
           </h1>
-
-          {/* Banner Paragraph */}
           <div className={styles.homeBannerActWrap}>
             <p className={styles.hmActPara}>
               GreenEco helps communities and businesses move towards sustainable
               and eco-friendly solutions.
             </p>
-            <Button variant="primary">Contribute Now</Button>
+            <Button variant="primary" href="#">Contribute Now</Button>
           </div>
 
           <div className={styles.homeBannerConWrap}>
@@ -55,7 +52,7 @@ export default function HomeBanner() {
                 impact.
               </p>
               <div className={styles.hmConAction}>
-                <Button variant="secondary">Take Action</Button>
+                <Button variant="secondary" href="#">Take Action</Button>
               </div>
             </div>
           </div>
