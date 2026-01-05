@@ -24,9 +24,7 @@ export default function Header() {
             </Link>
           </div>
           <div
-            className={`${styles.menuToggle} ${
-              menuOpen ? styles.active : ""
-            }`}
+            className={`${styles.menuToggle} ${menuOpen ? styles.active : ""}`}
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <span></span>
@@ -34,20 +32,69 @@ export default function Header() {
             <span></span>
           </div>
         </div>
-        <nav
-          className={`${styles.mobileMenu} ${
-            menuOpen ? styles.open : ""
-          }`}
-        >
+        <nav className={`${styles.mobileMenu} ${menuOpen ? styles.open : ""}`}>
           <ul>
-            <li><Link href="#home">Home</Link></li>
-            <li><Link href="#about">About</Link></li>
-            <li><Link href="#join">Features</Link></li>
+            <li>
+              <Link href="/" onClick={() => setMenuOpen(false)}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="#about" onClick={() => setMenuOpen(false)}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="#join" onClick={() => setMenuOpen(false)}>
+                Features
+              </Link>
+            </li>
           </ul>
 
           <Button href="#contact" variant="primary">
             Make A Difference
           </Button>
+          <div className={styles.socialLink}>
+            <Link
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/images/f-facebook.png"
+                alt="Facebook"
+                width={120}
+                height={120}
+                priority
+              />
+            </Link>
+            <Link
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/images/f-insta.png"
+                alt="Instagram"
+                width={120}
+                height={120}
+                priority
+              />
+            </Link>
+            <Link
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/images/f-linkein.png"
+                alt="LinkedIn"
+                width={120}
+                height={120}
+                priority
+              />
+            </Link>
+          </div>
         </nav>
         <div className={styles.headerWrapDesk}>
           <div className={styles.headerLogo}>
@@ -64,7 +111,7 @@ export default function Header() {
           <nav className={styles.navBar}>
             <ul>
               <li>
-                <Link href="#home">Home</Link>
+                <Link href="/">Home</Link>
               </li>
               <li>
                 <Link href="#about">About</Link>
